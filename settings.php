@@ -7,8 +7,8 @@
         'db' => array(
             'host' => 'localhost',
             'name' => 'ublog',
-            'user' => 'user',
-            'pass' => 'pass'
+            'user' => 'root',
+            'pass' => '6058'
         ),
         'validator' => '',
         'cookiename' => 'user'
