@@ -1,9 +1,5 @@
 <?php
-
-    global $settings;
-
-    mysql_connect( $settings[ 'db' ][ 'host' ], $settings[ 'db' ][ 'user' ], $settings[ 'db' ][ 'pass' ] ) or die( mysql_error() );
-    mysql_select_db( $settings[ 'db' ][ 'name' ] ) or die( mysql_error() );
-
-    mysql_query( "SET NAMES UTF8;" );
+    session_start();
+    mysql_connect('localhost','root','6058') or die( mysql_error() );
+    mysql_select_db('ublog') or die( mysql_error() );
 ?>
