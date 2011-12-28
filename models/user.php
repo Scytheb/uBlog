@@ -1,15 +1,17 @@
 <?php
+	//A function that given the userid returns the details of the profile
+	//of the requested user
 	function getProfileDetails($userid) {
 		if (!$userid) {
 			return false;
         }
-		$res = db(
+		$res = mysql_query(
                 "SELECT
-                    id, name, surname, location, email, occupation, interests, posts, website 
+                    *
                 FROM
                     user
                 WHERE
-                    userid = :username
+                    userid = :userid
                 LIMIT 1");
         if(!mysql_num_rows($res)) {
                 return false;
