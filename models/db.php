@@ -1,5 +1,6 @@
 <?php
-
+	
+	session_start();
     global $settings;
 
     mysql_connect( $settings[ 'db' ][ 'host' ], $settings[ 'db' ][ 'user' ], $settings[ 'db' ][ 'pass' ] ) or die( mysql_error() );
