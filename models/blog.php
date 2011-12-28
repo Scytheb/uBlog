@@ -11,8 +11,8 @@
                 FROM
                     blog
                 ORDER BY
-					:sort :sortStyle
-                LIMIT :ground, :ceiling ");
+					$sort $sortStyle
+                LIMIT $ground, $ceiling ");
         if(!mysql_num_rows($res)) {
 			return false;
         }
@@ -39,8 +39,8 @@
 				WHERE
 					userid=:userid
                 ORDER BY
-					:sort :sortStyle
-                LIMIT :ground, :ceiling ");
+					$sort $sortStyle
+                LIMIT $ground, $ceiling ");
         if(!mysql_num_rows($res)) {
 			return false;
         }

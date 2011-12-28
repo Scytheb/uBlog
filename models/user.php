@@ -11,7 +11,7 @@
                 FROM
                     user
                 WHERE
-                    userid = :userid
+                    userid = $userid
                 LIMIT 1");
         if(!mysql_num_rows($res)) {
                 return false;
