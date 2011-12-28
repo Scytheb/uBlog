@@ -70,6 +70,3 @@
 		return $input;
 	}
 ?>
-=======
-?>
->>>>>>> upstream/master
