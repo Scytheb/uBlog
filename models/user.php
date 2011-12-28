@@ -19,6 +19,7 @@
         $row = mysql_fetch_array( $res );
 			return $row;
 	}
+<<<<<<< HEAD
 	
 	//User login function
 	function login( $username, $password ){
@@ -70,3 +71,6 @@
 		return $input;
 	}
 ?>
+=======
+?>
+>>>>>>> upstream/master
