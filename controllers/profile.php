@@ -3,8 +3,8 @@
 	require_once('models/user.php');
 	//require_once('models/login.php');
 	global $user
-	//$login=doLogin($username, $password)
-	//$userid=$login['id'];
+	$login=login($username, $password)
+	$userid=$login['loginid'];
 	
 	$user = getProfileDetails($userid);
 	

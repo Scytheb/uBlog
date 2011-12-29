@@ -1,12 +1,30 @@
 <?php
-require_once "models/db.php";
-/*
-User management here
-*/
-/*  if( !isset( $_POST[ 'page' ] ) ){
-       die("error");   
-	 $page = $_POST[ 'page' ];
+	global $settings;
+    $settings = require( 'settings.php' );
+	require_once "models/db.php";
+    require_once "models/user.php";
+    //$user = getCurrentUser();
+    $page = 'register';
+    /*if( isset( $_GET[ 'page' ] ) ){
+        $page = $_GET[ 'page' ];
+    }
+    if( $user == false && !in_array( $page, array( 'login', 'register', 'dologin', 'doregister' ) ) ){
+        header( 'Location: ./?page=login' );
+        exit();
+    }
+    $whitelist = array( 'posts', 'post', 'dopost', 'docomment', 'login', 'register', 'dologin', 'doregister' );
+    if( !in_array( $page, $whitelist ) ){
+        die( "Could not find page $page." );
     }*/
-	$page='posting';
-	if($page=="posting") require "models/doposting.php";
+    
+	function clude( $path ) {
+        static $included = array();
+        if ( !isset( $included[ $path ] ) ) {
+            $included[ $path ] = true;
+            return include $path;
+        }
+        return true;
+    }
+	
+	require "controllers/{$page}.php";
 ?>

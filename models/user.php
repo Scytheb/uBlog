@@ -20,7 +20,7 @@
 			return $row;
 	}
 	
-	//User login function
+	//User login function returns details of the user login info
 	function login( $username, $password ){
 		$username=sanitize( $username );
 		$passwordHash=hash("sha1", sanitize( $password ) );
@@ -29,7 +29,7 @@
 			"SELECT
 				*
 			  FROM 
-				users
+				login
 			  WHERE
 				username=$username
 				
@@ -44,19 +44,20 @@
 	}
 	
 	//User registration function
-	function register( $name, $password, $email ){
+	function register( $username, $password, $email ) {
 		mysql_query(
 			"INSERT INTO 
-				user ( username, password, email, created )
+				login (username, password, email, created, enter)
             		VALUES
-				( sanitize($name), sanitize($password), sanitize($email), NOW() )
+				('sanitize($username)', 'sanitize($password)', 'sanitize($email)', 'NOW()', '1')
 			");
 		if( mysql_affected_rows() != 1 ){
         	    return false;
 		}
-        	return array(
+        	return 
+			array(
             		"id" => mysql_insert_id(),
-            		"username" => $name
+            		"username" => $username
         	);
     	}		
 
