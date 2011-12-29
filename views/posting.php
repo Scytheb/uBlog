@@ -1,6 +1,6 @@
 <?php require_once "header.php"; ?>
 <h2>Posting takes place here!</h2>
-<form method="post" action="/sandbox/index.php">
+<form method="post" action="../index.php">
 	<div>
         <input type="text" name="title" />
     </div>
