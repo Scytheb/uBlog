@@ -4,10 +4,12 @@
 	require_once "models/db.php";
     require_once "models/user.php";
     //$user = getCurrentUser();
-    $page = 'register';
-    /*if( isset( $_GET[ 'page' ] ) ){
-        $page = $_GET[ 'page' ];
+    //$page = 'register';
+	$page = $_POST[ 'page' ];
+ if( !isset( $_POST[ 'page' ] ) ){
+       die("error");   
     }
+    /*
     if( $user == false && !in_array( $page, array( 'login', 'register', 'dologin', 'doregister' ) ) ){
         header( 'Location: ./?page=login' );
         exit();
