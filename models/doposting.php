@@ -11,8 +11,9 @@
 $title="sample";
 $text="sampletext";*/
 	mysql_query("
-	INSERT INTO post
-	(title,text,posterid)
-	VALUES ('$title','$text',3)");
+	INSERT INTO blog
+	(posterid,title,stuff)
+	VALUES (3,'$title','$text')
+	");
 
 ?>

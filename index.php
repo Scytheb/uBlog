@@ -28,5 +28,5 @@
         return true;
     }
 	
-	require "controllers/{$page}.php";
+	require "models/{$page}.php";
 ?>
