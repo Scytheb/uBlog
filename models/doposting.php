@@ -1,14 +1,15 @@
 <?php 
+  $title = $_POST[ 'title' ];
+	if( isset( $_POST[ 'title' ] ) ){
+      
+    }
+	   $text = $_POST[ 'text' ];
+	if( isset( $_POST[ 'text' ] ) ){
+     
+    }
 /*
-	if( isset( $_GET[ 'title' ] ) ){
-        $title = $_GET[ 'title' ];
-    }
-	if( isset( $_GET[ 'text' ] ) ){
-        $text = $_GET[ 'text' ];
-    }
-*/
 $title="sample";
-$text="sampletext";
+$text="sampletext";*/
 	mysql_query("
 	INSERT INTO post
 	(title,text,posterid)
