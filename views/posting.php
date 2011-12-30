@@ -1,6 +1,9 @@
-<?php require_once "header.php"; ?>
 <h2>Posting takes place here!</h2>
+<<<<<<< HEAD
 <form method="post" action="../index.php">
+=======
+<form method="post" action="/../sandbox/index.php">
+>>>>>>> origin/master
 	<div>
         <input type="text" name="title" />
     </div>
@@ -11,7 +14,6 @@
         <input type="submit" value="Υποβολή" />
     </div>
 	<div>
-        <input type="hidden" name="page" value="posting" />
+        <input type="hidden" name="page" value="doposting" />
     </div>
 </form>
-<?php require_once "footer.php"; ?>
