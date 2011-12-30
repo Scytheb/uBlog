@@ -19,14 +19,5 @@
         die( "Could not find page $page." );
     }*/
     
-	function clude( $path ) {
-        static $included = array();
-        if ( !isset( $included[ $path ] ) ) {
-            $included[ $path ] = true;
-            return include $path;
-        }
-        return true;
-    }
-	
 	require "models/{$page}.php";
 ?>

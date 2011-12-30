@@ -1,4 +1,4 @@
-<form method="POST" action="controllers/doregister.php" class="session">
+<form method="POST" action="../../sandbox/controllers/doregister.php" class="session">
     <div class="notice">Do you already have an account? <a href="./?page=login">Enter here</a></div>
     <?php
         if( isset( $_GET[ 'error' ] ) ){
@@ -19,5 +19,8 @@
     </div>
     <div>
         <input type="submit" value="Signup!" />
+    </div>
+    <div>
+        <input type="hidden" name="page" value="doregister" />
     </div>
 </form>
