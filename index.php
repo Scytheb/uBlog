@@ -18,11 +18,7 @@
     if( !in_array( $page, $whitelist ) ){
         die( "Could not find page $page." );
     }*/
-<<<<<<< HEAD
  
 	require "controllers/{$page}.php";
-=======
-    
-	require "models/{$page}.php";
->>>>>>> origin/master
+
 ?>
