@@ -4,11 +4,11 @@
 	require_once "models/db.php";
     require_once "models/user.php";
     //$user = getCurrentUser();
-    //$page = 'register';
-	$page = $_POST[ 'page' ];
- if( !isset( $_POST[ 'page' ] ) ){
-       die("error");   
-    }
+    $page = 'register';
+	//$page = $_POST[ 'page' ];
+ //if( !isset( $_POST[ 'page' ] ) ){
+ //      die("error");   
+ //   }
     /*
     if( $user == false && !in_array( $page, array( 'login', 'register', 'dologin', 'doregister' ) ) ){
         header( 'Location: ./?page=login' );
@@ -18,15 +18,6 @@
     if( !in_array( $page, $whitelist ) ){
         die( "Could not find page $page." );
     }*/
-    
-	function clude( $path ) {
-        static $included = array();
-        if ( !isset( $included[ $path ] ) ) {
-            $included[ $path ] = true;
-            return include $path;
-        }
-        return true;
-    }
-	
+ 
 	require "controllers/{$page}.php";
 ?>
