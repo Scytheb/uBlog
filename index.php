@@ -7,9 +7,9 @@
     //$page = 'register';
 	$page='conpost';
 	//$page = $_POST[ 'page' ];
- //if( !isset( $_POST[ 'page' ] ) ){
- //      die("error");   
- //   }
+	//if( isset( $_GET[ 'page' ] ) ){
+     //$page = $_GET[ 'page' ];   
+    //}
     /*
     if( $user == false && !in_array( $page, array( 'login', 'register', 'dologin', 'doregister' ) ) ){
         header( 'Location: ./?page=login' );

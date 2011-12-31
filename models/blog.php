@@ -2,8 +2,8 @@
 	//A function that takes the number of results requested (smallest and biggest) and the
 	//way they are sorted (asc or desc) and returns all the information of the blogs
 	function allBlogPosts($ground, $ceiling, $sort, $sortStyle='DESC') {
-		if (!$ground||!$ceiling||!$sort) {
-			return false;
+		if (!isset($ground)||!isset($ceiling)||!isset($sort)) {
+			return "didn't send correct values";
         }
 		$res = mysql_query(
                 "SELECT
@@ -14,13 +14,15 @@
 					$sort $sortStyle
                 LIMIT $ground, $ceiling ");
         if(!mysql_num_rows($res)) {
-			return false;
+			die(mysql_error());
         }
 		$i=0;
 		$blog=array();
-        while ($row = mysql_fetch_array($res)) {
-			$blog[i]=$row;
-			$i+=1;
+		$row=array();
+        while ($row = mysql_fetch_assoc($res)) {
+			$blog[$i]=$row;
+			$i++;
+			unset($blog[$i]); 
 		}
 		return $blog;
 	}
@@ -28,7 +30,7 @@
 	//A function that takes the userid and the number of results results requested (smallest and biggest) and the
 	//way they are sorted (asc or desc) and returns all the information of the blogs from this user
 	function userBlogPosts($userid, $ground, $ceiling, $sort, $sortStyle='DESC') {
-		if (!$ground||!$ceiling||!$sort||) {
+		if (!$ground||!$ceiling||!$sort) {
 			return false;
         }
 		$res = mysql_query(

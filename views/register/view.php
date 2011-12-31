@@ -1,4 +1,4 @@
-<form method="POST" action="controllers/doregister.php" class="session">
+<form method="POST" action="controllers/register.php" class="session">
     <div class="notice">Do you already have an account? <a href="./?page=login">Enter here</a></div>
     <?php
         if( isset( $_GET[ 'error' ] ) ){
