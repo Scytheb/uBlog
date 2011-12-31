@@ -4,7 +4,8 @@
 	require_once "models/db.php";
     require_once "models/user.php";
     //$user = getCurrentUser();
-    $page = 'register';
+    //$page = 'register';
+	$page='conpost';
 	//$page = $_POST[ 'page' ];
  //if( !isset( $_POST[ 'page' ] ) ){
  //      die("error");   

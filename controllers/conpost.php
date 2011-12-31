@@ -1,3 +1,6 @@
-<?php require "../views/header.php"; ?>
-<?php require "../views/posting.php"; ?>
-<?php require "../views/footer.php"; ?>
+<?php 
+require "/views/header.php"; 
+require "/models/personal.php";
+require "/views/posting.php"; 
+require "/views/footer.php"; 
+?>

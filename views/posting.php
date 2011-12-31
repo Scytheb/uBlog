@@ -1,6 +1,22 @@
-<h2>Posting takes place here!</h2>
+<h2>Your Blog!</h2>
 
-<form method="post" action="../index.php">
+<?php
+	while($row = mysql_fetch_array($result)){
+		$t0=$row['title'];
+		$t1=$row['stuff'];
+		$t2=$row['image'];
+		$t3=$row['blogdate'];
+		echo"<div class='post'>";
+		echo "<h3>$t0</h3> <p>$t3</p>";
+		if (file_exists($t2)) echo"<p><img src='$t2' /></p>";
+		echo"
+		<p>$t1</p>
+		</div>
+		";
+	}
+?>
+<h3>New Post</h3>
+<form method="post" action="models/doposting.php">
 
 	<div>
         <input type="text" name="title" />
