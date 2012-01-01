@@ -6,5 +6,6 @@
 				}
 			?>
 		</ul>
-		<?php echo "<a href=globalblogs.php?page=".($page+1).">Next Page</a>"; ?>
+		<?php echo "<p><a href=globalblogs.php?page=".($page+1).">Next Page</a></p>"; ?>
+		<?php echo "<p><a href=globalblogs.php?page=".($page-1).">Previous Page</a></p>"; ?>
 </div>

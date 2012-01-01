@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="el" lang="el">
     <head>
         <title>uBlog</title>
-        <link rel="stylesheet" type="text/css" 
-		href="css/post.css" />
+        <link rel="stylesheet" type="text/css" href="css/post.css" />
+		<link rel="stylesheet" type="text/css" href="../css/post.css" />
     </head>
     <body>
         <div class="container">
